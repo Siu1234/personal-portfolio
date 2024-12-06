@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <nav class="flex flex-col md:flex-row items-center gap-4 container mx-auto my-12">
+        <img class="w-40 h-40 rounded-full" src="profile_pic.JPG" alt="Patrick Siu">
+        <p>@ Patrick Siu</p>
+
+        <ul class="flex border rounded-full md:ml-auto">
+            <li class="px-6 py-4 border rounded-full"><a href="#aboutme">About</a></li>
+            <li class="px-6 py-4"><a href="#skills">Skills and Works</a></li>
+            <li class="px-6 py-4"><a href="#works">Side Project</a></li>
+
+        </ul>
+    </nav>
+
+    <header class="container mx-auto my-16" id="aboutme">
+        <h2 class="text-4xl">I'm Patrick Siu, Major in Computing graduated.</h2>
+        <h4 class="text-xl my-6">This is my portfolio website. Here you can explore my work and skills.</h4>
+    
+        <div class="flex gap-1">
+            <a class="bg-gray-900 text-white p-4 rounded-full hover:opacity-80" href="#">
+                About Me
+            </a>
+        </div>
+    
+    </header>
+
+    <section class="container mx-auto my-12">
+        <div class="md:max-w-2xl lg:max-w-3xl xl:max-w-5xl">
+            <h3 class="text-2xl leading-9 my-6">
+                Welcome, I am a Computer Engineer,  specializing in requirement analysis and project management.
+            
+                <p class="mt-4">I am eager to further develop my skills as a programmer and build effective systems that drive innovation and efficiency.</p>
+            </h3>
+
+            <a class="flex gap-2 items-center font-semibold underline" href="CV.pdf" target="_blank">
+                Download Resume
+                
+                <span class="bg-purple-900 text-white p-2 rounded-full hover:opacity-80 group">
+                    <svg xmlns="https://www.w3.org/2000/svg" class="transition -rotate-45 group-hover:rotate-0" width="16" height="16"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M5 12l14 0"></path>
+                        <path d="M13 18l6 -6"></path>
+                        <path d="M13 6l6 6"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <section class="container mx-auto my-12" id="skills">
+        <h2 class="text-4xl my-6">Skills and Works</h2>
+        <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3">
+            <li>Requirement Analysis</li>
+            <li>Project Management</li>
+            <li>System Testing</li>
+            <li>React.js Programming</li>
+            <li>Node.js Programming</li>
+            <li>Java Programming</li>
+            <li>Python Programming</li>
+            <li>Database Management</li>
+            <li>User Support</li>
+        </div>
+    </section>
+
+    <section class="container mx-auto my-12" id="works">
+        <h2 class="text-4xl">The Side Project I Did</h2>
+
+        <div class="flex my-6 gap-2">
+            <a class="bg-gray-900 text-white p-4 rounded-full hover:opacity-80" href="#">
+                Web Application
+            </a>
+        </div>
+
+        <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div>
+                <img src="yt_clone.png" alt="YouTube Clone" />
+                <a class="text-2xl underline" href="https://golden-truffle-e6855e.netlify.app/" target="_blank">YouTube Clone</a><br>
+                <small>Built in 2023 by React</small>
+            </div>
+
+            <div>
+                <img src="gym_app.png" alt="Simple Gym App" />
+                <a class="text-2xl underline" href="https://siu1234.github.io/my-gym-react-app/" target="_blank">Simple Gym App</a><br>
+                <small>Built in 2024 by React</small>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <section class="container mx-auto my-12">
+            <h2 class="text-4xl">Please contact me at</h2>
+
+            <div class="grid">
+                <ul class="my-6 space-y-3 text-lg">
+                    <li>Phone Call: +852 68940938</li>
+                    <li>Email: siupk714@gmail.com</li>
+                </ul>
+            </div>
+        </section>
+
+    </footer>
+</body>
+</html>
