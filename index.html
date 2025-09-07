@@ -1,115 +1,156 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Siu's Portfolio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .navbar-sticky {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 10;
+        }
+        .section-padding {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+        .skill-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .project-image {
+            transition: transform 0.3s ease;
+        }
+        .project-image:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-    <nav class="flex flex-col md:flex-row items-center gap-4 container mx-auto my-12">
-        <img class="w-40 h-40 rounded-full" src="profile_pic.JPG" alt="Patrick Siu">
-        <p>@ Patrick Siu</p>
-
-        <ul class="flex border rounded-full md:ml-auto">
-            <li class="px-6 py-4 border rounded-full"><a href="#aboutme">About</a></li>
-            <li class="px-6 py-4"><a href="#skills">Skills and Works</a></li>
-            <li class="px-6 py-4"><a href="#works">Side Project</a></li>
-
+    <nav class="navbar-sticky flex flex-col md:flex-row items-center gap-4 container mx-auto py-6">
+        <div class="flex items-center gap-4">
+            <img class="w-20 h-20 rounded-full object-cover" src="profile_pic.JPG" alt="Patrick Siu">
+            <p class="text-lg font-semibold text-gray-800">@Patrick Siu</p>
+        </div>
+        <ul class="nav-links flex flex-col md:flex-row md:ml-auto gap-4">
+            <li><a href="#aboutme" class="px-6 py-2 text-lg font-medium text-gray-700 hover:text-purple-600 transition rounded-full hover:bg-purple-50">About</a></li>
+            <li><a href="#skills" class="px-6 py-2 text-lg font-medium text-gray-700 hover:text-purple-600 transition rounded-full hover:bg-purple-50">Skills</a></li>
+            <li><a href="#works" class="px-6 py-2 text-lg font-medium text-gray-700 hover:text-purple-600 transition rounded-full hover:bg-purple-50">Side Projects</a></li>
         </ul>
     </nav>
 
-    <header class="container mx-auto my-16" id="aboutme">
-        <h2 class="text-4xl">I'm Patrick Siu, Major in Computing graduated.</h2>
-        <h4 class="text-xl my-6">This is my portfolio website. Here you can explore my work and skills.</h4>
-    
-        <div class="flex gap-1">
-            <a class="bg-gray-900 text-white p-4 rounded-full hover:opacity-80" href="#">
-                About Me
+    <header class="container mx-auto section-padding" id="aboutme">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">I'm Patrick Siu</h2>
+        <h4 class="text-xl md:text-2xl text-gray-600 my-6">Software Engineer at NX Electronics Limited</h4>
+        <p class="text-lg text-gray-500 max-w-2xl">Welcome to my portfolio! I graduated from The Hong Kong Polytechnic University with a Bachelor of Science in Computing. Explore my work and skills in building innovative and efficient systems.</p>
+        <div class="flex gap-4 mt-8">
+            <a href="#aboutme" class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition font-semibold">About Me</a>
+            <a href="CV.pdf" target="_blank" class="flex items-center gap-2 text-purple-600 font-semibold hover:underline">
+                Download Resume
+                <svg xmlns="http://www.w3.org/2000/svg" class="transition -rotate-45 group-hover:rotate-0" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M5 12l14 0"></path>
+                    <path d="M13 18l6 -6"></path>
+                    <path d="M13 6l6 6"></path>
+                </svg>
             </a>
         </div>
-    
     </header>
 
-    <section class="container mx-auto my-12">
-        <div class="md:max-w-2xl lg:max-w-3xl xl:max-w-5xl">
-            <h3 class="text-2xl leading-9 my-6">
-                Welcome, I am a Computer Engineer,  specializing in requirement analysis and project management.
-            
-                <p class="mt-4">I am eager to further develop my skills as a programmer and build effective systems that drive innovation and efficiency.</p>
+    <section class="container mx-auto section-padding">
+        <div class="md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
+            <h3 class="text-3xl font-semibold text-gray-900 leading-tight">
+                Software Engineer Specializing in Requirement Analysis and Project Development and Management
             </h3>
-
-            <a class="flex gap-2 items-center font-semibold underline" href="CV.pdf" target="_blank">
-                Download Resume
-                
-                <span class="bg-purple-900 text-white p-2 rounded-full hover:opacity-80 group">
-                    <svg xmlns="https://www.w3.org/2000/svg" class="transition -rotate-45 group-hover:rotate-0" width="16" height="16"
-                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M5 12l14 0"></path>
-                        <path d="M13 18l6 -6"></path>
-                        <path d="M13 6l6 6"></path>
-                    </svg>
-                </span>
-            </a>
+            <p class="mt-4 text-lg text-gray-600">
+                I'm a Bachelor of Science in Computing graduate from The Hong Kong Polytechnic University, currently working as a Software Engineer at NX Electronics Limited. I'm passionate about leveraging my skills in C#, ASP.NET, Python, React.js, and MSSQL to build effective systems that drive innovation and efficiency.
+            </p>
         </div>
     </section>
 
-    <section class="container mx-auto my-12" id="skills">
-        <h2 class="text-4xl my-6">Skills and Works</h2>
-        <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3">
-            <li>Requirement Analysis</li>
-            <li>Project Management</li>
-            <li>System Testing</li>
-            <li>React.js Programming</li>
-            <li>Node.js Programming</li>
-            <li>Java Programming</li>
-            <li>Python Programming</li>
-            <li>Database Management</li>
-            <li>User Support</li>
-        </div>
-    </section>
-
-    <section class="container mx-auto my-12" id="works">
-        <h2 class="text-4xl">The Side Project I Did</h2>
-
-        <div class="flex my-6 gap-2">
-            <a class="bg-gray-900 text-white p-4 rounded-full hover:opacity-80" href="#">
-                Web Application
-            </a>
-        </div>
-
-        <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div>
-                <img src="yt_clone.png" alt="YouTube Clone" />
-                <a class="text-2xl underline" href="https://golden-truffle-e6855e.netlify.app/" target="_blank">YouTube Clone</a><br>
-                <small>Built in 2023 by React</small>
+    <section class="container mx-auto section-padding bg-gray-50" id="skills">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Skills and Expertise</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            <div class="skill-card bg-white p-4 rounded-lg shadow-md">
+                <p class="text-lg font-medium text-gray-800">C#</p>
             </div>
+            <div class="skill-card bg-white p-4 rounded-lg shadow-md">
+                <p class="text-lg font-medium text-gray-800">ASP.NET</p>
+            </div>
+            <div class="skill-card bg-white p-4 rounded-lg shadow-md">
+                <p class="text-lg font-medium text-gray-800">Python</p>
+            </div>
+            <div class="skill-card bg-white p-4 rounded-lg shadow-md">
+                <p class="text-lg font-medium text-gray-800">React.js</p>
+            </div>
+            <div class="skill-card bg-white p-4 rounded-lg shadow-md">
+                <p class="text-lg font-medium text-gray-800">MSSQL</p>
+            </div>
+        </div>
+    </section>
 
+    <section class="container mx-auto section-padding" id="works">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Side Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
             <div>
-                <img src="gym_app.png" alt="Simple Gym App" />
-                <a class="text-2xl underline" href="https://siu1234.github.io/my-gym-react-app/" target="_blank">Simple Gym App</a><br>
-                <small>Built in 2024 by React</small>
+                <img src="yt_clone.png" alt="YouTube Clone" class="project-image w-full h-64 object-cover rounded-lg shadow-md">
+                <a href="https://golden-truffle-e6855e.netlify.app/" target="_blank" class="text-2xl font-semibold text-purple-600 hover:underline mt-4 block">YouTube Clone</a>
+                <p class="text-gray-600 mt-2">Built in 2023 with React</p>
+            </div>
+            <div>
+                <img src="gym_app.png" alt="Simple Gym App" class="project-image w-full h-64 object-cover rounded-lg shadow-md">
+                <a href="https://siu1234.github.io/my-gym-react-app/" target="_blank" class="text-2xl font-semibold text-purple-600 hover:underline mt-4 block">Simple Gym App</a>
+                <p class="text-gray-600 mt-2">Built in 2024 with React</p>
             </div>
         </div>
     </section>
 
     <footer class="bg-gray-900 text-white py-12">
-        <section class="container mx-auto my-12">
-            <h2 class="text-4xl">Please contact me at</h2>
-
-            <div class="grid">
-                <ul class="my-6 space-y-3 text-lg">
-                    <li>Phone Call: +852 68940938</li>
-                    <li>Email: siupk714@gmail.com</li>
-                </ul>
+        <section class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold">Get in Touch</h2>
+            <div class="mt-6 space-y-3 text-lg">
+                <p>Phone: +852 68940938</p>
+                <p>Email: <a href="mailto:siupk714@gmail.com" class="hover:underline">siupk714@gmail.com</a></p>
             </div>
         </section>
-
     </footer>
+
+    <script>
+        // Add active class to navbar links on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section, header');
+            const navLinks = document.querySelectorAll('nav a');
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-purple-100', 'text-purple-700');
+                if (link.getAttribute('href').includes(currentSection)) {
+                    link.classList.add('bg-purple-100', 'text-purple-700');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
